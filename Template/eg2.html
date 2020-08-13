@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="course.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="title">
+      Course Form
+    </div>
+    <div class="form"> 
+        <div class="inputfield">
+          <label>Grade</label>
+          <div class="custom_select">
+            <select id="grade" name="grade" >
+              <option value="">Select</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+       </div>  
+       <div class="inputfield">
+        <label>Faculty</label>
+        <div class="custom_select">
+          <select id="faculty" onchange="populate(this.id,'course')">
+            <option value="">Select</option>
+            <option value="science" >Science</option>
+            <option value="management">Management</option>
+          </select>
+        </div>
+     </div> 
+     <div class="inputfield">
+        <label>Course</label>
+        <div class="custom_select">
+          <select id="course">
+          </select>
+        </div>
+     </div>  
+     <div class="inputfield">
+        <label>Pass Marks</label>
+        <div class="custom_select">
+          <select>
+            <option value="">Select</option>
+            <option value="24" id="24">24</option>
+            <option value="32" id="32">32</option>
+            <option value="40" id="40">40</option>
+          </select>
+        </div>
+     </div>  
+     <div class="inputfield">
+        <label>Full Marks</label>
+        <div class="custom_select">
+          <select>
+            <option value="">Select</option>
+            <option value="60" id="60">60</option>
+            <option value="80" id="80">80</option>
+            <option value="100" id="100">100</option>
+          </select>
+        </div>
+     </div>  
+      <div class="inputfield">
+        <input type="submit" value="Register" class="btn">
+      </div>
+    </div>
+</div>	
+	
+</body>
+<script >
+function populate(s1,s2){
+	var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+	s2.innerHTML = "";
+	if(s1.value == "science"){
+		var optionArray = ["|","biologoy11|Biologoy11","chemistry11|Chemistry11","computer11|Computer11","english11|English11","mathematics11|Mathematics11","physics11|Physics11","biology12|Biology12","chemistry12|Chemistry12","english12|English12","mathematics12|Mathematics12","nepali12|Nepali12","physics12|Physics12"];
+    } 
+ 
+    else if(s1.value == "management"){
+		var optionArray = ["|","economics11|Economics11","english11|English11","hotelmanagement11|Hotelmanagement11","nepali11|Nepali11","principleofaccounting11|Principleofaccounting11","businessmathematics12|Businessmathematics12","economics12|Economics12","english12|English12","hotelmanagement12|Hotelmanagement12","marketing12|Marketing12","principleofaccounting12|Principleofaccounting12"];
+	} 
+	for(var option in optionArray){
+		var pair = optionArray[option].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[0];
+		newOption.innerHTML = pair[1];
+		s2.options.add(newOption);
+	}
+}
+
+</script>
+</html>
