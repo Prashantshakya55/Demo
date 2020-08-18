@@ -6,6 +6,15 @@ body {
     font-size:16px;
 }
 
+.coverpic{
+    height: 100%;
+    width: 100%;
+    background-color: #cccccc;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+}
 .active{
     width:100%;
     display:block;
@@ -27,17 +36,6 @@ body {
     width: 400px;
 }
 
-.coverpic{
-    height: 100%;
-    width: 100%;
-    background-image:url("../images/coverpic.jpg");
-    background-color: #cccccc;
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    /* background-size: cover; */
-    /* background-attachment: fixed; */
-}
-
 .profile_img {
     display: table;
     margin: auto ;
@@ -57,13 +55,12 @@ body {
     display: table;
     margin:  auto;
   } 
-
   /* Search button */
   * {
     box-sizing: border-box;
   }
   
-.example input[type=text] {
+  .search input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
@@ -72,7 +69,7 @@ body {
     background: #f1f1f1;
   }
   
-.example button {
+  .search button {
     float: left;
     width: 20%;
     padding: 10px;
@@ -84,23 +81,31 @@ body {
     cursor: pointer;
   }
   
-.example button:hover {
+  .search button:hover {
     background: #0b7dda;
   }
   
-.example::after {
+  .search::after {
     content: "";
     clear: both;
     display: table;
   }
-
-  .searchbtn{
-      height: 42px;
+.marks {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
   }
-  .searchbtn img{
-    height: 20px;
+
+.button_img img{
+      height: 20px;
   }
-
-
-
+  
+.marks2 {background-color: #355d98;} 
   
